@@ -557,8 +557,8 @@ PER_BATTERY_DEFS = [
     },
 ]
 
- SETTING_SENSORS = [
-# below is not supported by 18kpv, and dangerous to change anyway     
+# below is not supported by 18kpv, and dangerous to change anyway   
+# SETTING_SENSORS = [   
 #    {
 #        "type": "sensor",
 #        "key": "HOLD_EPS_FREQ_SET",
@@ -575,4 +575,4 @@ PER_BATTERY_DEFS = [
 #        "unit": UnitOfElectricPotential.VOLT,
 #        "scale": 1,
 #    }
-]
+#]
