@@ -6,6 +6,11 @@ on:
     types:
       - published
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "v1.0.0"
+        required: true
+        type: string  
       
 jobs:
   release:
@@ -21,7 +26,7 @@ jobs:
       - name: 🔢 Adjust version number
         shell: bash
         run: |
-          version="${{ github.event.release.tag_name }}"
+          version="${{ github.event.release.tag_name || github.event.inputs.tag }}"
           version="${version,,}"
           version="${version#v}"
           yq e -P -o=json \
