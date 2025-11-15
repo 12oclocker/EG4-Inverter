@@ -295,6 +295,27 @@ RUNTIME_SENSORS = [
     },
     {
         "type": "sensor",
+        "key": "pEpsL1N",
+        "name": "Power to L1",
+        "unit": UnitOfPower.WATT,
+        "icon": "mdi:home-import-outline",
+    },
+    {
+        "type": "sensor",
+        "key": "pEpsL2N",
+        "name": "Power to L2",
+        "unit": UnitOfPower.WATT,
+        "icon": "mdi:home-import-outline",
+    },
+    {
+        "type": "sensor",
+        "key": "peps",
+        "name": "EPS Power Consumption",
+        "unit": UnitOfPower.WATT,
+        "icon": "mdi:home-import-outline",
+    },      
+    {
+        "type": "sensor",
         "key": "tradiator1",
         "name": "Radiator Temp 1",
         "unit": UnitOfTemperature.CELSIUS,
