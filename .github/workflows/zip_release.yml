@@ -6,7 +6,6 @@ on:
     types:
       - published
       
-workflow_dispatch:
 jobs:
   release:
     name: Release EG4 Inverter!
