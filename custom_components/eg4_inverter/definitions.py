@@ -295,21 +295,21 @@ RUNTIME_SENSORS = [
     },
     {
         "type": "sensor",
-        "key": "pEpsL1N",
+        "key": "pEpsL1N", # 18kpv and 6000xp wattage load when in EPS mode
         "name": "Power to L1",
         "unit": UnitOfPower.WATT,
         "icon": "mdi:home-import-outline",
     },
     {
         "type": "sensor",
-        "key": "pEpsL2N",
+        "key": "pEpsL2N", # 18kpv and 6000xp wattage load when in EPS mode
         "name": "Power to L2",
         "unit": UnitOfPower.WATT,
         "icon": "mdi:home-import-outline",
     },
     {
         "type": "sensor",
-        "key": "peps",
+        "key": "peps", # 18kpv wattage load when in EPS mode
         "name": "EPS Power Consumption",
         "unit": UnitOfPower.WATT,
         "icon": "mdi:home-import-outline",
@@ -557,21 +557,22 @@ PER_BATTERY_DEFS = [
     },
 ]
 
-SETTING_SENSORS = [
-    {
-        "type": "sensor",
-        "key": "HOLD_EPS_FREQ_SET",
-        "name": "EG4 EPS Frequency Setting",
-        "unit": None,
-        "unit": UnitOfFrequency.HERTZ,
-        "scale": 1,
-    },
-    {
-        "type": "sensor",
-        "key": "HOLD_EPS_VOLT_SET",
-        "name": "EG4 EPS Voltage Setting",
-        "unit": None,
-        "unit": UnitOfElectricPotential.VOLT,
-        "scale": 1,
-    }
+ SETTING_SENSORS = [
+# below is not supported by 18kpv, and dangerous to change anyway     
+#    {
+#        "type": "sensor",
+#        "key": "HOLD_EPS_FREQ_SET",
+#        "name": "EG4 EPS Frequency Setting",
+#        "unit": None,
+#        "unit": UnitOfFrequency.HERTZ,
+#        "scale": 1,
+#    },
+#    {
+#        "type": "sensor",
+#        "key": "HOLD_EPS_VOLT_SET",
+#        "name": "EG4 EPS Voltage Setting",
+#        "unit": None,
+#        "unit": UnitOfElectricPotential.VOLT,
+#        "scale": 1,
+#    }
 ]
