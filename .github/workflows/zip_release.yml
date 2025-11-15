@@ -1,4 +1,4 @@
----
+r ---
 name: Zip Release
 
 on:
@@ -8,10 +8,10 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "v1.0.0"
+        description: "Tag name (e.g., v1.2.3)"
         required: true
-        type: string  
-      
+        type: string
+
 jobs:
   release:
     name: Release EG4 Inverter!
@@ -19,6 +19,7 @@ jobs:
     permissions:
       contents: write
       id-token: write
+
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v4.2.2
@@ -33,7 +34,7 @@ jobs:
             -i ".version = \"${version}\"" \
             "${{ github.workspace }}/custom_components/eg4_inverter/manifest.json"
 
-      - name: 📦 Created zipped release package
+      - name: 📦 Create zipped release package
         shell: bash
         run: |
           cd "${{ github.workspace }}/custom_components/eg4_inverter"
@@ -48,3 +49,4 @@ jobs:
         uses: softprops/action-gh-release@v2.2.2
         with:
           files: ${{ github.workspace }}/custom_components/eg4_inverter/eg4-inverter.zip
+          tag_name: ${{ github.event.release.tag_name || github.event.inputs.tag }}
