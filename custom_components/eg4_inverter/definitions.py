@@ -252,6 +252,13 @@ RUNTIME_SENSORS = [
         "icon": "mdi:flash",
     },
     {
+        "type": "sensor", # 18kpv has a total sum of pv power
+        "key": "ppv",
+        "name": "PV Power Sum",
+        "unit": UnitOfPower.WATT,
+        "icon": "mdi:flash",
+    },    
+    {
         "type": "sensor",
         "key": "vacr",  # e.g. 6145 => 61.45 V? Or is it AC voltage in 0.1?
         "name": "AC Voltage",
