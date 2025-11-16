@@ -211,7 +211,7 @@ RUNTIME_SENSORS = [
         "key": "vpv1",
         "name": "PV1 Voltage",
         "unit": UnitOfElectricPotential.VOLT,
-        "scale": 0.01,  # if 2098 => 20.98, adjust if needed
+        "scale": 0.1,  # if 2098 means 209.8 scale is 0.1 #18kpv is 0.1 scale
         "icon": "mdi:solar-panel",
     },
     {
@@ -219,7 +219,7 @@ RUNTIME_SENSORS = [
         "key": "vpv2",
         "name": "PV2 Voltage",
         "unit": UnitOfElectricPotential.VOLT,
-        "scale": 0.01,
+        "scale": 0.1, #18kpv is 0.1 scale
         "icon": "mdi:solar-panel",
     },
     {
@@ -227,9 +227,17 @@ RUNTIME_SENSORS = [
         "key": "vpv3",
         "name": "PV3 Voltage",
         "unit": UnitOfElectricPotential.VOLT,
-        "scale": 0.01,
+        "scale": 0.1, #18kpv is 0.1 scale
         "icon": "mdi:solar-panel",
     },
+    {
+        "type": "sensor",
+        "key": "vpv3",
+        "name": "PV3 Voltage",
+        "unit": UnitOfElectricPotential.VOLT,
+        "scale": 0.1, #18kpv is 0.1 scale
+        "icon": "mdi:solar-panel",
+    },    
     {
         "type": "sensor",
         "key": "ppv1",
@@ -383,12 +391,14 @@ RUNTIME_SENSORS = [
         "key": "genVolt",
         "name": "Generator Voltage",
         "unit": UnitOfElectricPotential.VOLT,
+        "scale": 0.1,
     },
     {
         "type": "sensor",
         "key": "genFreq",
         "name": "Generator Frequency",
         "unit": UnitOfFrequency.HERTZ,
+        "scale": 0.1,
     },
     {
         "type": "sensor",
