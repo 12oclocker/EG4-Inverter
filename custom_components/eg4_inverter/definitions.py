@@ -229,15 +229,7 @@ RUNTIME_SENSORS = [
         "unit": UnitOfElectricPotential.VOLT,
         "scale": 0.1, #18kpv is 0.1 scale
         "icon": "mdi:solar-panel",
-    },
-    {
-        "type": "sensor",
-        "key": "vpv3",
-        "name": "PV3 Voltage",
-        "unit": UnitOfElectricPotential.VOLT,
-        "scale": 0.1, #18kpv is 0.1 scale
-        "icon": "mdi:solar-panel",
-    },    
+    },  
     {
         "type": "sensor",
         "key": "ppv1",
