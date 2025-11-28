@@ -475,12 +475,13 @@ BATTERY_SUMMARY_SENSORS = [
         "name": "Battery Voltage (Text)",
         "unit": UnitOfElectricPotential.VOLT,
     },
-    {
-        "type": "sensor",
-        "key": "batStatus", #18kpv battery status text, "Charging", "StandBy", "Discharging"
-        "name": "Battery Status (Text)",
-        "unit": None,
-    },    
+    # this info is only avaliable in "getBatteryInfo" which this github project does not gather, instead they gather BatteryData and BatteryUnit
+    #{ 
+    #    "type": "sensor",
+    #    "key": "batStatus", #18kpv battery status text, "Charging", "StandBy", "Discharging"
+    #    "name": "Battery Status (Text)",
+    #    "unit": None,
+    #},    
 ]
 
 
